@@ -43,7 +43,7 @@ public class Base {
         prop.load(fis);
         String browserName = prop.getProperty("browser");// data.properties
         if (browserName.contains("chrome")) {
-            WebDriverManager.chromedriver().setup();
+            //WebDriverManager.chromedriver().setup(); After Selenium 4.6.0, we dont need to setup browser driver.
             driver = new ChromeDriver();
             driver.manage().window().maximize();
             devTools = driver.getDevTools();
